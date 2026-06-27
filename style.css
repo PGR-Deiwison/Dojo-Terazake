@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+header {
+    height: auto;
+    width: 100%;
+    background-color: #060320;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-sizing: border-box; /* Garantir que o padding não estoure a largura */
+}
+
+/* Container da Logo e Nome (Lado Esquerdo) */
+.logo-container {
+    display: flex;
+    align-items: center; /* Centraliza a imagem verticalmente com o bloco de texto */
+    gap: 15px; /* Distância exata entre a imagem e o texto */
+}
+
+/* Imagem da Logo */
+.logo-img {
+    margin: 0;
+    padding: 0;
+    width: 90px;
+    height: 90px;
+    display: block;
+}
+
+/* Texto do Nome (Corrigindo o alinhamento das duas linhas) */
+.logo-text {
+    font-size: 35px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.1; /* Ajusta o espaçamento entre a linha 1 e a linha 2 */
+    margin: 10px;
+}
+
+.subtexto-logo {
+    font-size: 20px;       /* Tamanho bem menor que os 45px do título */
+    font-weight: normal;   /* Remove o negrito pesado, deixando mais elegante */
+    color: #cbd5e1;        /* Um tom de branco levemente acinzentado para dar destaque ao nome principal */
+    display: inline-block; /* Garante o comportamento correto do espaçamento */
+    margin-top: 5px;       /* Cria uma folga opcional entre as duas linhas */
+}
+
+/* ---- MENU (Lado Direito) ---- */
+
+/* Alinha os itens da lista um ao lado do outro */
+.menu-lista {
+    display: flex;
+    list-style: none; /* Remove as bolinhas pretas padrão */
+    margin: 0;
+    padding: 0;
+    gap: 10px; /* Distância entre cada botão do menu */
+}
+
+/* Estilo geral dos links do menu */
+.menu-lista a {
+    display: inline-block;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease; /* Efeito suave ao passar o mouse */
+}
+
+/* Efeito Hover genérico para os botões do menu */
+.menu-lista a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Cria um fundo leve ao passar o mouse */
+}
+
+/* ---- HERO SECTION ---- */
+.hero {
+    display: grid;
+    text-align: left;     /* Garante que os textos fiquem alinhados à esquerda */ 
+    
+}
+.hero-texto {
+    grid-area: 1/1; /* Faz o texto ocupar toda a área do grid */
+    padding: 20px 0px 30px 40px; /* Adiciona espaçamento interno para o texto */
+    display: flex;
+    flex-direction: column; /* Organiza o texto em coluna */
+    justify-content: space-between; /* Distribui o espaço entre o h1 e o strong */
+}
+.hero img {
+    width: 100%;
+    height: auto;    /* Mantém a proporção da imagem hero*/
+    grid-area: 1/1; /* Faz a imagem ocupar toda a área do grid */
+}
+
+.hero h1 { 
+    width: 40%;   
+    font-size: 60px;    
+    font-weight: bold;  
+    color: #fdfcfc;
+    
+}
+
+.hero strong {
+    width: 50%;
+    font-size: 30px;    
+    font-weight: bold;  
+    color: #fdfbfb;
+    
+}
+
+/* ---- BENEFICIOS SECTION ---- */
+.beneficios {
+    width: 100%;
+    height: auto;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+.ben-texto {
+    width: 100%;
+    height: auto;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+}
+
+.ben-texto h2 {
+    font-size: 40px;    
+    font-weight: bold;  
+    color: #060320;
+}
+
+.ben-texto p {
+    font-size: 20px;    
+    font-weight: normal;  
+    color: #9b0909;
+    width: 80%;
+    margin: 0 auto; /* Centraliza o parágrafo */
+    line-height: 1.6; /* Melhora a legibilidade do texto */
+}
+
+
+
+
