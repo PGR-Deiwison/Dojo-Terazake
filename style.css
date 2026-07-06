@@ -85,8 +85,8 @@ header {
 .hero {
     display: grid;
     text-align: left;     /* Garante que os textos fiquem alinhados à esquerda */ 
-    
 }
+
 .hero-texto {
     grid-area: 1/1; /* Faz o texto ocupar toda a área do grid */
     padding: 20px 0px 30px 40px; /* Adiciona espaçamento interno para o texto */
@@ -94,6 +94,7 @@ header {
     flex-direction: column; /* Organiza o texto em coluna */
     justify-content: space-between; /* Distribui o espaço entre o h1 e o strong */
 }
+
 .hero img {
     width: 100%;
     height: auto;    /* Mantém a proporção da imagem hero*/
@@ -105,46 +106,113 @@ header {
     font-size: 60px;    
     font-weight: bold;  
     color: #fdfcfc;
-    
 }
 
 .hero strong {
     width: 50%;
     font-size: 30px;    
     font-weight: bold;  
-    color: #fdfbfb;
-    
+    color: #fdfbfb; 
 }
 
 /* ---- BENEFICIOS SECTION ---- */
-.beneficios {
-    width: 100%;
-    height: auto;
+.beneficio {
+    margin-bottom: 60px;
     background-color: #f5f5f5;
-    text-align: center;
 }
-.ben-texto {
+
+.beneficio-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.beneficio-texto h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.beneficio-texto p {
+    font-size: 16px;
+    color: #24202e;
+    text-align: center;
+    max-width: 800px; /* Limita a largura do parágrafo para melhor leitura */
+    padding-top: 10px; /* Adiciona espaçamento entre o texto e a linha */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.beneficio-texto p::before {
+    content: ""; /* Cria o elemento da linha */
+    display: block;
+    
+    /* DEFINA O TAMANHO DA LINHA AQUI */
+    width: 60px; /* A linha terá apenas 60px de largura, bem menor que o texto */
+    height: 3px; /* Espessura idêntica à sua borda anterior */
+    
+    /* CONFIGURAÇÃO DA COR */
+    background-color: #bba009; /* A sua cor dourada */
+    
+    /* ESPAÇAMENTO */
+    margin-bottom: 15px; /* Distância entre a linha e o início do texto */
+}
+
+/* ---- BENEFICIOS  CARDS  SECTION ---- */
+.beneficios-cards {
+    display: grid; /* Cria 4 colunas iguais dividindo o espaço */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; /* Distância entre os cards */
+    margin: 40px 40px 20px 40px; /* Afasta o container das bordas da tela */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px; /* Adiciona espaçamento interno para os cards */
+    height: 100%; /* Força todos os cards a terem exatamente a mesma altura */
+    box-sizing: border-box; 
+    justify-content: space-between; 
+}
+
+.card-titulo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333333;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    /* O SEGREDO PARA TÍTULOS DE TAMANHOS DIFERENTES: */
     width: 100%;
-    height: auto;
-    padding: 10px 0px 10px 0px;
-    text-align: center;
+    /* Reserva espaço para até 2 linhas de texto. 
+       Se o título for de 1 linha, ele não vai encolher o card. */
+    min-height: 56px; 
+    /* Alinha o texto do título pelo topo da área reservada */
+    display: flex;
+    align-items: flex-start; 
+    justify-content: center;
 }
 
-.ben-texto h2 {
-    font-size: 40px;    
-    font-weight: bold;  
-    color: #060320;
+.card-texto {
+    font-size: 18px;
+    color: #666666;
+    padding: 20px 20px 0px 20px; 
+    /* Mantém o parágrafo empurrado para a base do card */
+    margin-top: auto; 
 }
 
-.ben-texto p {
-    font-size: 20px;    
-    font-weight: normal;  
-    color: #9b0909;
-    width: 80%;
-    margin: 0 auto; /* Centraliza o parágrafo */
-    line-height: 1.6; /* Melhora a legibilidade do texto */
+.card-img {
+    width: 150px; /* Define a largura da imagem */
+    height: 150px; /* Define a altura da imagem */
 }
 
-
+.sobre{
+    background: #090129;
+    color: #dfdfdf;
+}
 
 
