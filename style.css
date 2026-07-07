@@ -81,7 +81,7 @@ header {
     background-color: rgba(255, 255, 255, 0.1); /* Cria um fundo leve ao passar o mouse */
 }
 
-/* ---- HERO SECTION ---- */
+/* ---- SEÇÃO HERO  ---- */
 .hero {
     display: grid;
     text-align: left;     /* Garante que os textos fiquem alinhados à esquerda */ 
@@ -115,10 +115,9 @@ header {
     color: #fdfbfb; 
 }
 
-/* ---- BENEFICIOS SECTION ---- */
+/* ---- SEÇÃO BENEFICIOS ---- */
 .beneficio {
-    margin-bottom: 60px;
-    background-color: #f5f5f5;
+    background-color: #e2dcdc;
 }
 
 .beneficio-texto {
@@ -161,12 +160,12 @@ header {
     margin-bottom: 15px; /* Distância entre a linha e o início do texto */
 }
 
-/* ---- BENEFICIOS  CARDS  SECTION ---- */
+/* ---- SEÇÃO BENEFICIOS CARDS ---- */
 .beneficios-cards {
     display: grid; /* Cria 4 colunas iguais dividindo o espaço */
     grid-template-columns: repeat(4, 1fr); 
     gap: 20px; /* Distância entre os cards */
-    margin: 40px 40px 20px 40px; /* Afasta o container das bordas da tela */
+    margin: 40px 40px 0px 40px; /* Afasta o container das bordas da tela */
 }
 
 .card {
@@ -185,14 +184,12 @@ header {
     font-weight: bold;
     color: #333333;
     margin-top: 20px;
-    padding-bottom: 10px;
-    /* O SEGREDO PARA TÍTULOS DE TAMANHOS DIFERENTES: */
-    width: 100%;
+    padding-bottom: 10px; /* Adiciona espaçamento entre o título e o texto */
+    width: 100%; /* O SEGREDO PARA TÍTULOS DE TAMANHOS DIFERENTES: */
     /* Reserva espaço para até 2 linhas de texto. 
        Se o título for de 1 linha, ele não vai encolher o card. */
     min-height: 56px; 
-    /* Alinha o texto do título pelo topo da área reservada */
-    display: flex;
+    display: flex; /* Alinha o texto do título pelo topo da área reservada */
     align-items: flex-start; 
     justify-content: center;
 }
@@ -210,9 +207,94 @@ header {
     height: 150px; /* Define a altura da imagem */
 }
 
-.sobre{
-    background: #090129;
-    color: #dfdfdf;
+/* ---- SEÇÃO SOBRE ---- */
+.sobre {
+    background-image: url("imagens/sobre.png"); /* Define a imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir toda a área do container */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    display: flex;
+    flex-direction: row; /* Alinha a imagem e o texto lado a lado */
+    justify-content: space-between; /* Distribui o espaço entre a imagem e o texto */
+    flex-wrap: wrap; /* Permite que os elementos quebrem linha em telas menores */
+    margin-top: 0px; /* Remove a margem superior */
 }
+
+.sobre-texto {
+    width: 45%; /* Define a largura do bloco de texto */
+    padding: 20px 0px 10px 40px; /* Adiciona espaçamento interno para o texto */
+    display: flex;
+    flex-direction: column; /* Organiza o texto em coluna */
+    justify-content: space-between; /* Distribui o espaço entre o h2 e os parágrafos */
+}
+
+.sobre h2 {   
+    padding: 18px;
+    font-size: 30px;    
+    font-weight: normal;  
+    color: #fdfcfc;
+    margin-top: 0px;
+}
+
+.sobre strong {
+    color: #bba009; /* Mantém a cor dourada para o destaque */
+}
+.sobre p {
+    font-size: 16px;    
+    font-weight: normal;  
+    color: #fdfbfb;
+    padding: 15px;
+}
+
+.sobre-sensei-img {
+    width: 40%; 
+    padding-top: 20px; 
+    border-radius: 45% 45% 45% 5%; /* Adiciona cantos arredondados à imagem */
+}
+
+.sobre-sensei{
+    width: 55%; /* Define a largura do bloco de texto */
+    display: flex;
+    flex-wrap:wrap; /* Permite que os elementos quebrem linha em telas menores */
+}
+
+.texto-sensei {
+    width: 55%; /* Define a largura do bloco de texto */
+    padding: 20px 0px 30px 40px; /* Adiciona espaçamento interno para o texto */
+    display: flex;
+    flex-direction: column; /* Organiza o texto em coluna */
+    justify-content: space-between; /* Distribui o espaço entre o h2 e os parágrafos */
+}
+
+.missao {
+    display: flex;
+    flex-direction: row; /* Alinha a imagem e o texto lado a lado */
+    justify-content: space-between; /* Distribui o espaço entre a imagem e o texto */
+    flex-wrap: wrap; /* Permite que os elementos quebrem linha em telas menores */
+    border: 3px solid #bba009; /* Adiciona uma borda dourada */
+    border-radius: 10px; /* Adiciona cantos arredondados à borda */
+    padding: 20px; /* Adiciona espaçamento interno para o conteúdo */
+    margin: 60px 70px 50px 50px; /* Adiciona espaçamento externo entre a missão e outros elementos */
+    align-items: center; /* Centraliza verticalmente a imagem e o texto */
+}
+
+.missao-texto {
+    width: 80%;
+    font-size: 20px;
+    font-weight: normal;
+    color: #fdfbfb;
+    display: flex;
+    flex-direction: column; /* Organiza o texto em coluna */
+    justify-content: space-between; /* Distribui o espaço entre o h2 e os parágrafos */
+     flex-wrap:wrap; /* Permite que os elementos quebrem linha em telas menores */
+}
+
+.missao-img {
+    width: 100px; /* Define a largura da imagem */
+    height: 100px; /* Define a altura da imagem */
+    margin-right: 10px; /* Adiciona espaçamento entre a imagem e o texto */
+}
+
+
 
 
