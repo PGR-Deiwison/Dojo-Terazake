@@ -196,7 +196,7 @@ header {
 
 .card-texto {
     font-size: 18px;
-    color: #666666;
+    color: #585252;
     padding: 20px 20px 0px 20px; 
     /* Mantém o parágrafo empurrado para a base do card */
     margin-top: auto; 
@@ -295,6 +295,36 @@ header {
     margin-right: 10px; /* Adiciona espaçamento entre a imagem e o texto */
 }
 
+/* ---- SEÇÃO CONTATO ---- */
+.contato {
+    background-color: #e2dcdc;
+}
+
+.contato-titulo {
+    text-align: left;
+    padding: 20px;
+}
+
+.contato-cartao{
+    display: grid; /* Cria 3 colunas iguais dividindo o espaço */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* Distância entre os cards */
+}
+
+.cartao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 20px; /* Adiciona espaçamento interno para os cards */
+    height: 100%; /* Força todos os cards a terem exatamente a mesma altura */
+    box-sizing: border-box; 
+    justify-content: space-between; 
+}
+
+.cartao i {
+    color: #000000 !important; /* Força os ícones a ficarem pretos */
+    font-size: 30px; /* Aumenta o tamanho para você enxergar melhor */
+}
 
 
 
