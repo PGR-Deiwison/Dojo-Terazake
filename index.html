@@ -1,76 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <!-- SEO Otimizado para a Academia -->
+    <meta name="description" content="Dojo Terazake - Aulas de Judô com foco em disciplina, respeito e confiança para toda a vida. Aulas para crianças e adultos em Alagoas. Agende uma aula experimental!">
+    <meta name="keywords" content="judô, academia de judô, dojo terazake, artes marciais, judô infantil, Alagoas">
+    
+    <!-- Ícones e Fontes -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="icon" type="image/png" href="imagens/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Dojo Terazake</title>
+    
+    <title>Dojo Terazake | Academia de Judô para Toda a Vida</title>
 </head>
 <body>
+    
+    <!-- CABEÇALHO / MENU -->
     <header>
         <div class="logo-container">
-            <img style="width: 90px; height: 90px;" src="imagens/logo.png" alt="Logo do Dojo Terazake" class="logo-img">
-            <div class="logo-text">Dojo Terazake <br> <span class="subtexto-logo">Para a Vida</span>
-            </div>
+            <img src="imagens/logo.png" alt="Logo do Dojo Terazake" class="logo-img">
+            <div class="logo-text">Dojo Terazake <br> <span class="subtexto-logo">Para a Vida</span></div>
         </div>        
             
         <nav class="menu">
             <ul class="menu-lista">
-                <li><a href="#beneficios" class="btn-beneficios">Benefícios do Judô</a></li>
-                <li><a href="#sobre" class="btn-sobre">Sobre</a></li>
+                <li><a href="#beneficios" class="btn-beneficios">Benefícios</a></li>
+                <li><a href="#sobre" class="btn-sobre">Sobre Nós</a></li>
                 <li><a href="#contato" class="btn-contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <!-- SEÇÃO HERO (DESTAQUE PRINCIPAL) -->
         <section class="hero">
-                <img src="imagens/hero.png" alt="Imagem de destaque do Dojo Terazake" class="hero-img">
-                <div class="hero-texto">
-                    <h1>DISCIPLINA, RESPEITO E CONFIANÇA <br> PARA TODA VIDA!</h1>
-                    <strong>Mais que um esporte, o judô forma <br> cidadãos dentro e fora dos tatames.</strong>
-                </div>
+            <img src="imagens/hero.png" alt="Imagem de destaque do Dojo Terazake" class="hero-img">
+            <div class="hero-texto">
+                <h1>DISCIPLINA, RESPEITO E CONFIANÇA <br> PARA TODA VIDA!</h1>
+                <p>Mais que um esporte, o judô forma <br> cidadãos dentro e fora dos tatames.</p>
+                <a href="#contato" class="btn-hero-cta">Agendar Aula Experimental <i class="bi bi-arrow-right"></i></a>
+            </div>
         </section>
 
-        <section class="beneficio">
+        <!-- SEÇÃO BENEFÍCIOS (ESTRUTURA DE CARDS ADAPTADA) -->
+        <section id="beneficios" class="beneficio">
             <div class="beneficio-texto">
                 <h2>Benefícios do Judô</h2>
-                <p>O judô é uma arte marcial que oferece inúmeros benefícios para o desenvolvimento físico, mental e social de seus praticantes. Abaixo, destacamos alguns dos principais benefícios que a prática do judô pode proporcionar:</p>
+                <p>O judô é uma arte marcial que oferece inúmeros benefícios para o desenvolvimento físico, mental e social de seus praticantes. Abaixo, destacamos alguns dos principais pilares que a prática do judô proporciona:</p>
             </div>
             
-                <div class="beneficios-cards">
-                    <div class="card">
-                        <img src="imagens/desenvolvimento.svg" alt="Imagem ilustrativa do benefício 1" class="card-img">
-                        <h3 class="card-titulo">1. DESENVOLVIMENTO FÍSICO E MENTAL</h3>
-                        <p class="card-texto">A prática do judô melhora a força, resistência, flexibilidade e coordenação motora. Estimula a concentração, o foco e a tomada de decisões rápidas.</p>
-                    </div>
-
-                    <div class="card">
-                        <img src="imagens/respeito.svg" alt="Imagem ilustrativa do benefício 2" class="card-img">
-                        <h3 class="card-titulo">2. RESPEITO E DISCIPLINA</h3>
-                        <p class="card-texto">O judô ensina o respeito aos colegas, instrutores e adversários. Incentiva a disciplina, o cumprimento das regras e o autocontrole.</p>
-                    </div>
-
-                    <div class="card">
-                        <img src="imagens/confianca.svg" alt="Imagem ilustrativa do benefício 3" class="card-img">
-                        <h3 class="card-titulo">3. CONFIANÇA</h3>
-                        <p class="card-texto">Através do aprendizado progressivo das técnicas e da superação de desafios, os praticantes desenvolvem autoconfiança e autoestima.</p>
-                    </div>
-
-                    <div class="card">
-                        <img src="imagens/socializacao.svg" alt="Imagem ilustrativa do benefício 4" class="card-img">
-                        <h3 class="card-titulo">4. SOCIALIZAÇÃO</h3>
-                        <p class="card-texto">O judô promove a interação social entre os alunos, incentivando o trabalho em equipe, a cooperação e a construção de amizades duradouras.</p>
-                    </div>
+            <!-- Grid unificado para facilitar o CSS Grid Flexbox -->
+            <div class="beneficios-cards-grid">
+                <div class="card-beneficio">
+                    <img src="imagens/desenvolvimento.svg" alt="Ícone Desenvolvimento" class="card-img">
+                    <h3>1. DESENVOLVIMENTO FÍSICO E MENTAL</h3>
+                    <p>A prática do judô melhora a força, resistência, flexibilidade e coordenação motora. Estimula a concentração, o foco e a tomada de decisões rápidas.</p>
                 </div>
+
+                <div class="card-beneficio">
+                    <img src="imagens/respeito.svg" alt="Ícone Respeito e Disciplina" class="card-img">
+                    <h3>2. RESPEITO E DISCIPLINA</h3>
+                    <p>O judô ensina o respeito aos colegas, instrutores e adversários. Incentiva a disciplina, o cumprimento das regras e o desenvolvimento do autocontrole emocional.</p>
+                </div>
+
+                <div class="card-beneficio">
+                    <img src="imagens/confianca.svg" alt="Ícone Confiança" class="card-img">
+                    <h3>3. CONFIANÇA</h3>
+                    <p>Através do aprendizado progressivo das técnicas e da superação de desafios, os praticantes desenvolvem forte autoconfiança e autoestima cotidiana.</p>
+                </div>
+
+                <div class="card-beneficio">
+                    <img src="imagens/socializacao.svg" alt="Ícone Socialização" class="card-img">
+                    <h3>4. SOCIALIZAÇÃO</h3>
+                    <p>O judô promove a interação social saudável entre os alunos, incentivando o trabalho em equipe, a cooperação coletiva e a construção de amizades duradouras.</p>
+                </div>
+            </div>
         </section>  
 
-        <section class="sobre">
+        <!-- SEÇÃO QUEM SOMOS / HISTÓRIA -->
+        <section id="sobre" class="sobre">
             <div class="sobre-texto">
                 <h2>SOBRE O <strong>DOJO TERAZAKE</strong></h2>
                 <p>O Dojo Terazake é um espaço dedicado à prática do judô, promovendo disciplina, respeito e confiança para toda a vida. Nosso objetivo é formar cidadãos íntegros, tanto dentro quanto fora dos tatames.</p>
@@ -78,56 +91,74 @@
                 <p>Venha conhecer nosso dojo e descubra como o judô pode transformar a vida de seu filho!</p>
             </div>
 
-            <div class="sobre-sensei">
-                <img src="imagens/foto-iraci.png" alt="Imagem da Sensei Iraci Oliveira" class="sobre-sensei-img">  
+            <div class="sobre-sensei-box">
+                <div class="sensei-perfil">
+                    <img src="imagens/foto-iraci.png" alt="Sensei Iraci Oliveira" class="sobre-sensei-img">  
                     <div class="texto-sensei"> 
-                        <h2><span style="color: #bba009; font-size: 22px;">Sensei</span> <br> IRACI OLIVEIRA</h2>
-                        <p>Sensei Iraci Oliveira é a fundadora do Dojo Terazake e possui vasta experiência no ensino do judô. Com uma abordagem centrada no desenvolvimento integral dos alunos, Sensei Iraci busca transmitir não apenas técnicas de judô, mas também valores que contribuem para a formação de cidadãos conscientes e responsáveis.</p>
-                    </div>
-                    <div class="missao">
-                        <img src="imagens/portal-jap.png" alt="imagem portal japonês" class="missao-img">
-                        <div class="missao-texto">
-                            <h2>Missão</h2>
-                            <p>Promover a prática do judô como ferramenta de desenvolvimento pessoal, incentivando a disciplina, o respeito e a confiança em nossos alunos.</p>
-                        </div>
-                    </div>
-            </div>
-
-        </section>
-
-        <section class="contato">
-            <h2 class="contato-titulo">Contato</h2>
-                <div class="contato-cartao">
-                    <div class="cartao">
-                        <i class="bi bi-clock"></i>
-                        <h3 class="cartao-titulo">Horário de funcionamento:</h3> 
-                        <p class="cartao-texto"> Terças e  Quintas, das 19h às 21h, e Sábados, das 9h às 11h</p>
-                    </div>
-
-                    <div class="cartao">
-                        <i class="bi bi-geo-alt"></i>
-                        <h3 class="cartao-titulo">Endereço</h3> 
-                        <p class="cartao-texto">Rua Exemplo, 123 - Cidade, Estado</p> 
-                        <a href="https://www.google.com/maps/place/Rua+Exemplo,+123" target="_blank">Ver no mapa</a>
-                    </div>
-
-                    <div class="cartao">
-                        <i class="bi bi-whatsapp"></i>
-                        <h3 class="cartao-titulo">WhatsApp:</h3> 
-                        <p class="cartao-texto">(82) 12345-6789</p> 
-                        <a href="https://wa.me/558212345678" target="_blank">Clique aqui para enviar uma mensagem</a>
+                        <h3><span class="titulo-sensei">Sensei</span><br>IRACI OLIVEIRA</h3>
+                        <p>Fundadora do Dojo Terazake com vasta experiência no ensino do judô. Com uma abordagem centrada no desenvolvimento integral, busca transmitir não apenas técnicas de judô, mas também valores que contribuem para a formação de cidadãos conscientes.</p>
                     </div>
                 </div>
+                
+                <div class="missao-box">
+                    <img src="imagens/portal-jap.png" alt="Portal Japonês" class="missao-img">
+                    <div class="missao-texto">
+                        <h3>Nossa Missão</h3>
+                        <p>Promover a prática do judô como ferramenta de desenvolvimento pessoal, incentivando a disciplina, o respeito e a confiança em nossos alunos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEÇÃO DE CONTATO / INFORMAÇÕES DE MATRÍCULA -->
+        <section id="contato" class="contato">
+            <h2 class="contato-titulo">Informações e Matrículas</h2>
+            <p class="contato-sub">Agende sua visita ou entre em contato direto pelo WhatsApp</p>
+            
+            <div class="contato-cards-grid">
+                <div class="card-contato-info">
+                    <i class="bi bi-clock"></i>
+                    <h3>Horário de Funcionamento</h3> 
+                    <p>Terças e Quintas: 19h às 21h<br>Sábados: 9h às 11h</p>
+                </div>
+
+                <div class="card-contato-info">
+                    <i class="bi bi-geo-alt"></i>
+                    <h3>Nosso Endereço</h3> 
+                    <p>Rua Exemplo, 123 - Cidade, Estado</p> 
+                    <a href="https://www.google.com/maps/place/Rua+Exemplo,+123" target="_blank" class="btn-link-mapa">Ver no Google Maps <i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+
+                <div class="card-contato-info featured-whatsapp-card">
+                    <i class="bi bi-whatsapp"></i>
+                    <h3>Fale no WhatsApp</h3> 
+                    <p>(82) 12345-6789</p> 
+                    <a href="https://wa.me/558212345678" target="_blank" class="btn-whatsapp-action">Iniciar Conversa Agora</a>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>© 2026 Dojo Terazake. Todos os direitos reservados. Desenvolvido por EVLuxDigital</p>
-            <ul>
-                <li>Instagram: <a href="https://www.instagram.com/dojo.terazake" target="_blank">instagram.com/dojo.terazake</a></li>
-                <li>Facebook: <a href="https://www.facebook.com/dojo.terazake" target="_blank">facebook.com/dojo.terazake</a></li>
-                <li>YouTube: <a href="https://www.youtube.com/dojo.terazake" target="_blank">youtube.com/dojo.terazake</a></li>
-            </ul>
+    <!-- RODAPÉ COMPLETO E PROFISSIONAL -->
+    <footer class="footer-dojo">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h4>Dojo Terazake</h4>
+                <p>Formando campeões para a vida inteira através do Judô.</p>
+            </div>
+            <div class="footer-social">
+                <h4>Siga Nossas Redes</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/dojo.terazake" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="https://www.facebook.com/dojo.terazake" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.youtube.com/dojo.terazake" target="_blank" title="YouTube"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-credits">
+                <p>© 2026 Dojo Terazake. Todos os direitos reservados.</p>
+                <p class="evlux-sig">Desenvolvido com excelência por <a href="https://evluxdigital.com.br" target="_blank">EVLux Digital</a></p>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
