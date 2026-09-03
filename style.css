@@ -1,5 +1,5 @@
 /* ==========================================================================
-   RESET & CONFIGURAÇÕES GLOBAIS (Mantendo suas fontes originais)
+   1. RESET & VARIÁVEIS GLOBAIS
    ========================================================================== */
 * {
     margin: 0;
@@ -7,135 +7,150 @@
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
 }
 
 html {
-    scroll-behavior: smooth; /* Faz os links do menu rolarem suavemente */
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #f5f5f5;
+    background-color: #f8f9fa;
     color: #333333;
     overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* CONTAINER PADRÃO */
+.container-global {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
 }
 
 /* ==========================================================================
-   HEADER / MENU DE NAVEGAÇÃO (Suas configurações originais)
+   2. HEADER & MENU DE NAVEGAÇÃO
    ========================================================================== */
 header {
-    height: auto;
     width: 100%;
     background-color: #060320;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 20px;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
 }
 
 .logo-container {
     display: flex;
-    align-items: center; 
-    gap: 15px; 
+    align-items: center;
+    gap: 15px;
 }
 
 .logo-img {
-    width: 90px;
-    height: 90px;
-    display: block;
+    width: 75px;
+    height: 75px;
     object-fit: contain;
 }
 
 .logo-text {
-    font-size: clamp(22px, 3vw, 35px);
-    font-weight: bold;
+    font-size: 28px;
+    font-weight: 800;
     color: #ffffff;
-    text-align: left;
-    line-height: 1.1; 
-    margin: 0;
+    line-height: 1.1;
 }
 
 .subtexto-logo {
-    font-size: clamp(14px, 1.8vw, 20px);       
-    font-weight: normal;   
-    color: #cbd5e1;        
-    display: inline-block; 
-    margin-top: 5px;       
+    font-size: 16px;
+    font-weight: 400;
+    color: #cbd5e1;
+    display: block;
+    margin-top: 3px;
 }
 
 .menu-lista {
     display: flex;
-    list-style: none; 
-    margin: 0;
-    padding: 0;
-    gap: 10px; 
+    list-style: none;
+    gap: 10px;
 }
 
 .menu-lista a {
-    display: inline-block;
-    text-decoration: none; 
+    text-decoration: none;
     color: #ffffff;
     font-size: 16px;
-    font-weight: 500;
-    padding: 10px 20px;
+    font-weight: 600;
+    padding: 10px 18px;
     border-radius: 20px;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
 
 .menu-lista a:hover {
-    background-color: rgba(255, 255, 255, 0.1); 
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #bba009;
 }
 
 /* ==========================================================================
-   SEÇÃO HERO (Seu efeito sobreposto inteligente)
+   3. SEÇÃO HERO (DOBRAL PRINCIPAL)
    ========================================================================== */
 .hero {
     display: grid;
-    text-align: left;     
-    position: relative;
+    grid-template-columns: 1fr;
+    align-items: center;
     background-color: #060320;
+    position: relative;
+    min-height: 75vh;
 }
 
 .hero img.hero-img {
+    grid-area: 1 / 1;
     width: 100%;
-    height: auto;    
-    grid-area: 1/1; 
-    opacity: 0.8; /* Adicionado um leve filtro para ler o texto branco melhor */
+    height: 100%;
     object-fit: cover;
+    opacity: 0.35; /* Opacidade controlada para dar forte leitura ao texto */
 }
 
 .hero-texto {
-    grid-area: 1/1; 
-    padding: 60px 40px; 
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; /* Centraliza verticalmente o bloco de textos */
-    align-items: flex-start;
+    grid-area: 1 / 1;
+    position: relative;
     z-index: 2;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.hero h1 { 
-    width: 55%;   
-    font-size: clamp(28px, 4vw, 55px);    
-    font-weight: bold;  
-    color: #fdfcfc;
-    margin-bottom: 20px;
+.hero h1 {
+    max-width: 650px;
+    font-size: clamp(28px, 4.5vw, 52px);
+    font-weight: 900;
+    color: #ffffff;
     line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 .hero-texto p {
-    width: 50%;
-    font-size: clamp(16px, 2vw, 26px);    
-    font-weight: bold;  
-    color: #fdfbfb; 
-    margin-bottom: 30px;
+    max-width: 550px;
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: 600;
+    color: #f1f5f9;
+    margin-bottom: 35px;
+    line-height: 1.4;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
-/* Novo Botão de CTA para conversão */
 .btn-hero-cta {
     display: inline-flex;
     align-items: center;
@@ -144,8 +159,8 @@ header {
     color: #060320;
     text-decoration: none;
     font-weight: 700;
-    font-size: 18px;
-    padding: 15px 30px;
+    font-size: 16px;
+    padding: 16px 32px;
     border-radius: 30px;
     box-shadow: 0 4px 15px rgba(187, 160, 9, 0.4);
     transition: all 0.3s ease;
@@ -153,72 +168,62 @@ header {
 
 .btn-hero-cta:hover {
     background-color: #ffffff;
-    color: #060320;
     transform: translateY(-3px);
 }
 
 /* ==========================================================================
-   SEÇÃO BENEFÍCIOS (Seus Cards Otimizados)
+   4. SEÇÃO BENEFÍCIOS (CARDS FLUIDOS)
    ========================================================================== */
 .beneficio {
     background-color: #e2dcdc;
-    padding: 60px 0;
+    padding: 80px 20px;
 }
 
 .beneficio-texto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
 }
 
 .beneficio-texto h2 {
-    font-size: 32px;
-    font-weight: bold;
-    color: #333333;
-    margin-bottom: 10px;
+    font-size: clamp(26px, 3.5vw, 36px);
+    font-weight: 800;
+    color: #060320;
+    margin-bottom: 15px;
 }
 
 .beneficio-texto p {
     font-size: 16px;
     color: #24202e;
-    text-align: center;
-    max-width: 800px; 
-    padding-top: 10px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    line-height: 1.6;
 }
 
 .beneficio-texto p::before {
-    content: ""; 
+    content: "";
     display: block;
-    width: 60px; 
-    height: 3px; 
-    background-color: #bba009; 
-    margin-bottom: 15px; 
+    width: 60px;
+    height: 4px;
+    background-color: #bba009;
+    margin: 0 auto 20px auto;
 }
 
-/* Grid Corrigido e Responsivo para os Cards */
 .beneficios-cards-grid {
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    gap: 25px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
     max-width: 1200px;
-    margin: 40px auto 0 auto;
-    padding: 0 20px;
+    margin: 0 auto;
 }
 
 .card-beneficio {
     background-color: #ffffff;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 35px 20px; 
-    height: 100%; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
 }
 
@@ -226,153 +231,144 @@ header {
     transform: translateY(-5px);
 }
 
-.card-beneficio img.card-img {
-    width: 120px; 
-    height: 120px;
+.card-img {
+    width: 100px;
+    height: 100px;
     object-fit: contain;
+    margin-bottom: 15px;
 }
 
 .card-beneficio h3 {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333333;
-    margin-top: 20px;
-    min-height: 56px; 
-    display: flex; 
-    align-items: flex-start; 
-    justify-content: center;
+    font-size: 17px;
+    font-weight: 700;
+    color: #060320;
+    margin-bottom: 12px;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
 }
 
 .card-beneficio p {
-    font-size: 15px;
-    color: #585252;
-    margin-top: 10px; 
+    font-size: 14px;
+    color: #555555;
     line-height: 1.5;
 }
 
 /* ==========================================================================
-   SEÇÃO SOBRE (Seu layout com imagem de fundo integrado)
+   5. SEÇÃO SOBRE (QUEM SOMOS & SENSEI)
    ========================================================================== */
 .sobre {
-    background-image: linear-gradient(rgba(6, 3, 32, 0.85), rgba(6, 3, 32, 0.85)), url("imagens/sobre.png"); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-    display: flex;
-    flex-direction: row; 
-    justify-content: space-between; 
-    flex-wrap: wrap; 
+    background-image: linear-gradient(rgba(6, 3, 32, 0.9), rgba(6, 3, 32, 0.9)), url("imagens/sobre.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     padding: 80px 20px;
 }
 
-.sobre-texto {
-    width: 45%; 
-    padding: 20px;
-    display: flex;
-    flex-direction: column; 
-    justify-content: flex-start;
+.sobre-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: flex-start;
 }
 
-.sobre h2 {   
-    font-size: 32px;    
-    font-weight: normal;  
-    color: #fdfcfc;
+.sobre-texto h2 {
+    font-size: clamp(26px, 3.5vw, 36px);
+    font-weight: 400;
+    color: #ffffff;
     margin-bottom: 20px;
 }
 
-.sobre strong {
-    color: #bba009; 
+.sobre h2 strong {
+    color: #bba009;
+    font-weight: 800;
 }
 
-.sobre p {
-    font-size: 16px;    
-    font-weight: normal;  
-    color: #fdfbfb;
-    margin-bottom: 15px;
+.sobre-texto p {
+    color: #f1f5f9;
+    font-size: 15px;
+    margin-bottom: 20px;
     line-height: 1.6;
 }
 
-/* Ajuste da Caixa Organizadora da Sensei e Missão */
 .sobre-sensei-box {
-    width: 50%; 
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
 }
 
 .sensei-perfil {
     display: flex;
-    gap: 20px;
     align-items: center;
-    background: rgba(255, 255, 255, 0.05);
-    padding: 25px;
-    border-radius: 15px;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sobre-sensei-img {
-    width: 130px; 
-    height: 130px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 50%; /* Transformado em formato circular moderno */
+    border-radius: 50%;
     border: 3px solid #bba009;
-}
-
-.texto-sensei {
-    flex: 1;
+    flex-shrink: 0;
 }
 
 .texto-sensei h3 {
     color: #ffffff;
-    font-size: 22px;
-    line-height: 1.2;
-    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .titulo-sensei {
     color: #bba009;
-    font-size: 16px;
-    font-weight: normal;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .texto-sensei p {
-    font-size: 14px;
     color: #cbd5e1;
-    margin: 0;
+    font-size: 14px;
+    margin-top: 5px;
+    line-height: 1.5;
 }
 
-/* Box da Missão Otimizada */
 .missao-box {
     display: flex;
-    flex-direction: row; 
-    border: 3px solid #bba009; 
-    border-radius: 10px; 
-    padding: 25px; 
-    background-color: rgba(6, 3, 30, 0.6);
-    align-items: center; 
+    align-items: center;
     gap: 20px;
+    border: 2px solid #bba009;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: rgba(6, 3, 32, 0.5);
 }
 
 .missao-img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
+    flex-shrink: 0;
 }
 
 .missao-texto h3 {
     color: #bba009;
-    font-size: 20px;
-    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
 }
 
 .missao-texto p {
-    font-size: 14px;
     color: #ffffff;
-    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
 }
 
 /* ==========================================================================
-   SEÇÃO CONTATO (Estilização dos novos cards)
+   6. SEÇÃO CONTATO
    ========================================================================== */
 .contato {
     background-color: #ffffff;
@@ -381,16 +377,16 @@ header {
 }
 
 .contato-titulo {
-    font-size: 32px;
-    font-weight: bold;
+    font-size: clamp(26px, 3.5vw, 36px);
+    font-weight: 800;
     color: #060320;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .contato-sub {
     font-size: 16px;
     color: #666666;
-    margin-bottom: 40px;
+    margin-bottom: 45px;
 }
 
 .contato-cards-grid {
@@ -405,44 +401,38 @@ header {
     background-color: #f8f9fa;
     border: 1px solid #eef0f2;
     border-radius: 12px;
-    padding: 35px 25px;
+    padding: 30px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: all 0.3s ease;
-}
-
-.card-contato-info:hover {
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
 .card-contato-info i {
-    font-size: 35px;
+    font-size: 32px;
     color: #060320;
     margin-bottom: 15px;
 }
 
 .card-contato-info h3 {
     font-size: 18px;
+    font-weight: 700;
     color: #060320;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .card-contato-info p {
-    font-size: 15px;
+    font-size: 14px;
     color: #555555;
     margin-bottom: 15px;
-    line-height: 1.5;
 }
 
 .btn-link-mapa {
     color: #bba009;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 14px;
 }
 
-/* Card Destacado do WhatsApp */
 .featured-whatsapp-card {
     border: 2px solid #25D366;
     background-color: rgba(37, 211, 102, 0.02);
@@ -456,53 +446,109 @@ header {
     background-color: #25D366;
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 20px;
-    font-weight: bold;
-    font-size: 15px;
-    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+    font-weight: 700;
+    font-size: 14px;
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
     transition: all 0.3s ease;
 }
 
 .btn-whatsapp-action:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.5);
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
 }
 
 /* ==========================================================================
-   RODAPÉ PROFISSIONAL (Estilo premium para o portfólio)
+   7. RODAPÉ (FOOTER)
    ========================================================================== */
 .footer-dojo {
     background-color: #060320;
     color: #ffffff;
-    padding: 60px 20px;
-    text-align: center;
+    padding: 60px 20px 20px 20px;
+    border-top: 4px solid #bba009;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.footer-brand h4, .footer-social h4 {
+    color: #bba009;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    color: #cbd5e1;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #bba009;
+}
+
+.footer-credits {
+    grid-column: 1 / -1;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.evlux-sig a {
+    color: #bba009;
+    text-decoration: none;
+    font-weight: 700;
 }
 
 /* ==========================================================================
-   RESPONSIVIDADE AVANÇADA E COMPLETA (CORREÇÃO MOBILE)
+   8. MEDIA QUERIES (RESPONSIVIDADE INDESTRUTÍVEL)
    ========================================================================== */
+
+@media (max-width: 992px) {
+    .sobre-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
 @media (max-width: 768px) {
-    /* 1. Ajuste Geral do Cabeçalho e Menu */
-    header {
+    /* Menu Mobile Simplificado e Seguro */
+    .header-container {
         flex-direction: column;
         gap: 15px;
         padding: 15px 10px;
-        text-align: center;
-    }
-    
-    .logo-container {
-        flex-direction: column;
-        gap: 8px;
-    }
-    
-    .logo-text {
-        text-align: center;
-        font-size: 26px; /* Tamanho confortável para telas pequenas */
     }
 
-    .subtexto-logo {
-        font-size: 14px;
+    .logo-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .logo-text {
+        text-align: center;
     }
 
     .menu-lista {
@@ -511,142 +557,69 @@ header {
         flex-wrap: wrap;
         gap: 5px;
     }
-
     .menu-lista a {
         font-size: 14px;
         padding: 8px 12px;
     }
 
-    /* 2. Ajuste Crítico do Hero (Para o texto não sumir ou amassar sobre a foto) */
+    /* Ajuste de Posicionamento e Escrita no Hero */
     .hero {
+        min-height: auto;
         display: flex;
-        flex-direction: column-reverse; /* Inverte: Imagem fica em cima e texto embaixo no celular */
-        background-color: #060320;
+        flex-direction: column-reverse;
     }
 
     .hero img.hero-img {
-        height: 250px; /* Limita a altura da foto no celular */
-        object-fit: cover;
+        height: 220px;
+        width: 100%;
     }
 
     .hero-texto {
-        padding: 30px 20px;
+        padding: 30px 15px;
         text-align: center;
         align-items: center;
     }
 
     .hero h1 {
         width: 100%;
-        font-size: 26px; /* Fonte reduzida para não quebrar muitas linhas */
-        margin-bottom: 15px;
+        text-align: center;
     }
 
     .hero-texto p {
         width: 100%;
-        font-size: 16px;
+        text-align: center;
         margin-bottom: 25px;
     }
 
     .btn-hero-cta {
-        width: 100%; /* Botão ocupa a largura total no celular, facilitando o clique */
-        justify-content: center;
-        font-size: 16px;
-    }
-
-    /* 3. Seção Benefícios */
-    .beneficio {
-        padding: 40px 10px;
-    }
-
-    .beneficio-texto h2 {
-        font-size: 26px;
-    }
-
-    .beneficios-cards-grid {
-        margin-top: 25px;
-        padding: 0 10px;
-        gap: 15px;
-    }
-
-    .card-beneficio {
-        padding: 25px 15px;
-    }
-
-    /* 4. Seção Sobre (Desempilhando e limpando o fundo no celular) */
-    .sobre {
-        flex-direction: column;
-        padding: 50px 15px;
-        background-attachment: scroll; /* Evita travamentos de rolagem em navegadores mobile */
-    }
-
-    .sobre-texto {
         width: 100%;
-        padding: 0 0 30px 0;
-        text-align: center;
-    }
-
-    .sobre h2 {
-        font-size: 26px;
-        text-align: center;
+        justify-content: center;
         padding: 0;
     }
 
-    .sobre p {
-        padding: 10px 0;
-        font-size: 15px;
+    /* Grid de Benefícios */
+    .beneficios-cards-grid {
+        grid-template-columns: 1fr;
     }
 
-    .sobre-sensei-box {
-        width: 100%;
-        gap: 25px;
+    .card-beneficio h3 {
+        min-height: auto;
     }
 
-    /* Ajuste do Perfil da Sensei no celular */
-    .sensei-perfil {
-        flex-direction: column; /* Foto em cima, texto embaixo */
+    /* Alinhamentos Verticais da Seção Sobre */
+    .sobre-texto {
         text-align: center;
-        padding: 20px 15px;
     }
 
-    .sobre-sensei-img {
-        width: 110px;
-        height: 110px;
-    }
-
-    .texto-sensei h3 {
-        font-size: 18px;
-        margin-top: 10px;
-    }
-
-    /* Ajuste da Caixa de Missão no celular */
-    .missao-box {
-        flex-direction: column; /* Ícone em cima, texto embaixo */
+    .sensei-perfil, .missao-box {
+        flex-direction: column;
         text-align: center;
-        padding: 20px 15px;
-        margin: 0; /* Zera as margens grandes que empurravam o layout */
+        padding: 20px;
     }
 
-    .missao-img {
-        width: 60px;
-        height: 60px;
-    }
-
-    /* 5. Seção Contato */
-    .contato {
-        padding: 50px 15px;
-    }
-
-    .contato-titulo {
-        font-size: 26px;
-    }
-
+    /* Grid de Contato e Botões */
     .contato-cards-grid {
-        gap: 15px;
-    }
-
-    .card-contato-info {
-        padding: 25px 15px;
-        width: 100%;
+        grid-template-columns: 1fr;
     }
 
     .btn-whatsapp-action {
@@ -654,15 +627,11 @@ header {
         text-align: center;
     }
 
-    /* 6. Rodapé no celular */
-    .footer-dojo {
-        padding: 40px 15px 20px 15px;
-    }
-
+    /* Ajustes Gerais do Rodapé */
     .footer-container {
-        grid-template-columns: 1fr; /* Força uma única coluna centralizada */
-        gap: 30px;
+        grid-template-columns: 1fr;
         text-align: center;
+        gap: 30px;
     }
 
     .social-icons {
@@ -671,8 +640,8 @@ header {
 
     .footer-credits {
         flex-direction: column;
-        gap: 15px;
+        align-items: center;
+        gap: 10px;
         text-align: center;
-        padding-top: 20px;
     }
 }
