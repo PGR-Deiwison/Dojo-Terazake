@@ -478,3 +478,201 @@ header {
     padding: 60px 20px;
     text-align: center;
 }
+
+/* ==========================================================================
+   RESPONSIVIDADE AVANÇADA E COMPLETA (CORREÇÃO MOBILE)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* 1. Ajuste Geral do Cabeçalho e Menu */
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 10px;
+        text-align: center;
+    }
+    
+    .logo-container {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .logo-text {
+        text-align: center;
+        font-size: 26px; /* Tamanho confortável para telas pequenas */
+    }
+
+    .subtexto-logo {
+        font-size: 14px;
+    }
+
+    .menu-lista {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .menu-lista a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    /* 2. Ajuste Crítico do Hero (Para o texto não sumir ou amassar sobre a foto) */
+    .hero {
+        display: flex;
+        flex-direction: column-reverse; /* Inverte: Imagem fica em cima e texto embaixo no celular */
+        background-color: #060320;
+    }
+
+    .hero img.hero-img {
+        height: 250px; /* Limita a altura da foto no celular */
+        object-fit: cover;
+    }
+
+    .hero-texto {
+        padding: 30px 20px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero h1 {
+        width: 100%;
+        font-size: 26px; /* Fonte reduzida para não quebrar muitas linhas */
+        margin-bottom: 15px;
+    }
+
+    .hero-texto p {
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .btn-hero-cta {
+        width: 100%; /* Botão ocupa a largura total no celular, facilitando o clique */
+        justify-content: center;
+        font-size: 16px;
+    }
+
+    /* 3. Seção Benefícios */
+    .beneficio {
+        padding: 40px 10px;
+    }
+
+    .beneficio-texto h2 {
+        font-size: 26px;
+    }
+
+    .beneficios-cards-grid {
+        margin-top: 25px;
+        padding: 0 10px;
+        gap: 15px;
+    }
+
+    .card-beneficio {
+        padding: 25px 15px;
+    }
+
+    /* 4. Seção Sobre (Desempilhando e limpando o fundo no celular) */
+    .sobre {
+        flex-direction: column;
+        padding: 50px 15px;
+        background-attachment: scroll; /* Evita travamentos de rolagem em navegadores mobile */
+    }
+
+    .sobre-texto {
+        width: 100%;
+        padding: 0 0 30px 0;
+        text-align: center;
+    }
+
+    .sobre h2 {
+        font-size: 26px;
+        text-align: center;
+        padding: 0;
+    }
+
+    .sobre p {
+        padding: 10px 0;
+        font-size: 15px;
+    }
+
+    .sobre-sensei-box {
+        width: 100%;
+        gap: 25px;
+    }
+
+    /* Ajuste do Perfil da Sensei no celular */
+    .sensei-perfil {
+        flex-direction: column; /* Foto em cima, texto embaixo */
+        text-align: center;
+        padding: 20px 15px;
+    }
+
+    .sobre-sensei-img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .texto-sensei h3 {
+        font-size: 18px;
+        margin-top: 10px;
+    }
+
+    /* Ajuste da Caixa de Missão no celular */
+    .missao-box {
+        flex-direction: column; /* Ícone em cima, texto embaixo */
+        text-align: center;
+        padding: 20px 15px;
+        margin: 0; /* Zera as margens grandes que empurravam o layout */
+    }
+
+    .missao-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* 5. Seção Contato */
+    .contato {
+        padding: 50px 15px;
+    }
+
+    .contato-titulo {
+        font-size: 26px;
+    }
+
+    .contato-cards-grid {
+        gap: 15px;
+    }
+
+    .card-contato-info {
+        padding: 25px 15px;
+        width: 100%;
+    }
+
+    .btn-whatsapp-action {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 6. Rodapé no celular */
+    .footer-dojo {
+        padding: 40px 15px 20px 15px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr; /* Força uma única coluna centralizada */
+        gap: 30px;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .footer-credits {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding-top: 20px;
+    }
+}
