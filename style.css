@@ -76,6 +76,10 @@ header {
     margin-top: 3px;
 }
 
+.menu {
+    margin-left: auto;
+}
+
 .menu-lista {
     display: flex;
     list-style: none;
