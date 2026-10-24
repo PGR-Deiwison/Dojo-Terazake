@@ -10,42 +10,51 @@
     
     <!-- Ícones e Fontes -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <link rel="icon" type="image/png" href="imagens/favicon.ico">
+    <link rel="icon" href="imagens/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="imagens/apple-touch-icon.png">
+    <link rel="manifest" href="imagens/site.webmanifest">
+    <meta name="theme-color" content="#060320">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     
     <title>Dojo Terazake | Academia de Judô para Toda a Vida</title>
 </head>
 <body>
-    
+
     <!-- CABEÇALHO / MENU -->
     <header>
         <div class="header-container">
             <div class="logo-container">
-                <img src="imagens/logo.png" alt="Logo do Dojo Terazake" class="logo-img">
+                <img src="imagens/logo-150.png" alt="Logo do Dojo Terazake" class="logo-img" width="150" height="150">
                 <div class="logo-text">Dojo Terazake <br> <span class="subtexto-logo">Para a Vida</span></div>
             </div>        
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu" hidden>
+                <span class="menu-toggle-barras" aria-hidden="true"></span>
+            </button>
                 
-            <nav class="menu">
+            <nav class="menu" id="menu-principal" aria-label="Menu principal">
                 <ul class="menu-lista">
-                    <li><a href="#beneficios" class="btn-beneficios">Benefícios</a></li>
-                    <li><a href="#sobre" class="btn-sobre">Sobre Nós</a></li>
-                    <li><a href="#contato" class="btn-contato">Contato</a></li>
+                    <li><a href="#beneficios">Benefícios</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main id="conteudo">
         <!-- SEÇÃO HERO (DESTAQUE PRINCIPAL) -->
         <section class="hero">
-            <img src="imagens/hero.png" alt="Imagem de destaque do Dojo Terazake" class="hero-img">
+            <img src="imagens/hero.jpg" alt="" class="hero-img" width="1596" height="656" fetchpriority="high">
             <div class="hero-texto">
                 <h1>DISCIPLINA, RESPEITO E CONFIANÇA <br> PARA TODA VIDA!</h1>
                 <p>Mais que um esporte, o judô forma <br> cidadãos dentro e fora dos tatames.</p>
-                <a href="#contato" class="btn-hero-cta">Agendar Aula Experimental <i class="bi bi-arrow-right"></i></a>
+                <a href="#contato" class="btn-hero-cta">Agendar Aula Experimental <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
             </div>
         </section>
 
@@ -59,25 +68,25 @@
             <!-- Grid unificado para facilitar o CSS Grid Flexbox -->
             <div class="beneficios-cards-grid">
                 <div class="card-beneficio">
-                    <img src="imagens/desenvolvimento.svg" alt="Ícone Desenvolvimento" class="card-img">
+                    <img src="imagens/desenvolvimento.svg" alt="" class="card-img" width="100" height="100" loading="lazy">
                     <h3>1. DESENVOLVIMENTO FÍSICO E MENTAL</h3>
                     <p>A prática do judô melhora a força, resistência, flexibilidade e coordenação motora. Estimula a concentração, o foco e a tomada de decisões rápidas.</p>
                 </div>
 
                 <div class="card-beneficio">
-                    <img src="imagens/respeito.svg" alt="Ícone Respeito e Disciplina" class="card-img">
+                    <img src="imagens/respeito.svg" alt="" class="card-img" width="100" height="100" loading="lazy">
                     <h3>2. RESPEITO E DISCIPLINA</h3>
                     <p>O judô ensina o respeito aos colegas, instrutores e adversários. Incentiva a disciplina, o cumprimento das regras e o desenvolvimento do autocontrole emocional.</p>
                 </div>
 
                 <div class="card-beneficio">
-                    <img src="imagens/Confianca.svg" alt="Ícone Confiança" class="card-img">
+                    <img src="imagens/Confianca.svg" alt="" class="card-img" width="100" height="100" loading="lazy">
                     <h3>3. CONFIANÇA</h3>
                     <p>Através do aprendizado progressivo das técnicas e da superação de desafios, os praticantes desenvolvem forte autoconfiança e autoestima cotidiana.</p>
                 </div>
 
                 <div class="card-beneficio">
-                    <img src="imagens/socializacao.svg" alt="Ícone Socialização" class="card-img">
+                    <img src="imagens/socializacao.svg" alt="" class="card-img" width="100" height="100" loading="lazy">
                     <h3>4. SOCIALIZAÇÃO</h3>
                     <p>O judô promove a interação social saudável entre os alunos, incentivando o trabalho em equipe, a cooperação coletiva e a construção de amizades duradouras.</p>
                 </div>
@@ -86,6 +95,7 @@
 
         <!-- SEÇÃO QUEM SOMOS / HISTÓRIA -->
         <section id="sobre" class="sobre">
+          <div class="sobre-container">
             <div class="sobre-texto">
                 <h2>SOBRE O <strong>DOJO TERAZAKE</strong></h2>
                 <p>O Dojo Terazake é um espaço dedicado à prática do judô, promovendo disciplina, respeito e confiança para toda a vida. Nosso objetivo é formar cidadãos íntegros, tanto dentro quanto fora dos tatames.</p>
@@ -95,7 +105,7 @@
 
             <div class="sobre-sensei-box">
                 <div class="sensei-perfil">
-                    <img src="imagens/foto-iraci.png" alt="Sensei Iraci Oliveira" class="sobre-sensei-img">  
+                    <img src="imagens/foto_iraci-300.png" alt="Sensei Iraci Oliveira" class="sobre-sensei-img" width="300" height="352" loading="lazy">  
                     <div class="texto-sensei"> 
                         <h3><span class="titulo-sensei">Sensei</span><br>IRACI OLIVEIRA</h3>
                         <p>Fundadora do Dojo Terazake com vasta experiência no ensino do judô. Com uma abordagem centrada no desenvolvimento integral, busca transmitir não apenas técnicas de judô, mas também valores que contribuem para a formação de cidadãos conscientes.</p>
@@ -103,13 +113,14 @@
                 </div>
                 
                 <div class="missao-box">
-                    <img src="imagens/portal-jap.png" alt="Portal Japonês" class="missao-img">
+                    <img src="imagens/portal-jap.png" alt="" class="missao-img" width="685" height="502" loading="lazy">
                     <div class="missao-texto">
                         <h3>Nossa Missão</h3>
                         <p>Promover a prática do judô como ferramenta de desenvolvimento pessoal, incentivando a disciplina, o respeito e a confiança em nossos alunos.</p>
                     </div>
                 </div>
             </div>
+          </div>
         </section>
 
         <!-- SEÇÃO DE CONTATO / INFORMAÇÕES DE MATRÍCULA -->
@@ -119,20 +130,20 @@
             
             <div class="contato-cards-grid">
                 <div class="card-contato-info">
-                    <i class="bi bi-clock"></i>
+                    <i class="bi bi-clock" aria-hidden="true"></i>
                     <h3>Horário de Funcionamento</h3> 
                     <p>Terças e Quintas: 19h às 21h<br>Sábados: 9h às 11h</p>
                 </div>
 
                 <div class="card-contato-info">
-                    <i class="bi bi-geo-alt"></i>
+                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
                     <h3>Nosso Endereço</h3> 
                     <p>Rua Exemplo, 123 - Cidade, Estado</p> 
-                    <a href="https://www.google.com/maps/place/Rua+Exemplo,+123" target="_blank" class="btn-link-mapa">Ver no Google Maps <i class="bi bi-box-arrow-up-right"></i></a>
+                    <a href="https://www.google.com/maps/place/Rua+Exemplo,+123" target="_blank" class="btn-link-mapa">Ver no Google Maps <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
                 </div>
 
                 <div class="card-contato-info featured-whatsapp-card">
-                    <i class="bi bi-whatsapp"></i>
+                    <i class="bi bi-whatsapp" aria-hidden="true"></i>
                     <h3>Fale no WhatsApp</h3> 
                     <p>(82) 12345-6789</p> 
                     <a href="https://wa.me/558212345678" target="_blank" class="btn-whatsapp-action">Iniciar Conversa Agora</a>
@@ -151,9 +162,9 @@
             <div class="footer-social">
                 <h4>Siga Nossas Redes</h4>
                 <div class="social-icons">
-                    <a href="https://www.instagram.com/dojo.terazake" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
-                    <a href="https://www.facebook.com/dojo.terazake" target="_blank" title="Facebook"><i class="bi bi-facebook"></i></a>
-                    <a href="https://www.youtube.com/dojo.terazake" target="_blank" title="YouTube"><i class="bi bi-youtube"></i></a>
+                    <a href="https://www.instagram.com/dojo.terazake" target="_blank" title="Instagram" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/dojo.terazake" target="_blank" title="Facebook" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com/dojo.terazake" target="_blank" title="YouTube" aria-label="YouTube"><i class="bi bi-youtube" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="footer-credits">
@@ -162,5 +173,6 @@
             </div>
         </div>
     </footer>
+    <script src="script.js" defer></script>
 </body>
 </html>

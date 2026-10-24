@@ -1,6 +1,12 @@
 /* ==========================================================================
    1. RESET & VARIÁVEIS GLOBAIS
    ========================================================================== */
+:root {
+    --cor-primaria: #060320;
+    --cor-destaque: #bba009;
+    --cor-whatsapp: #25D366;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +16,13 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
 }
 
 body {
@@ -20,12 +32,10 @@ body {
     line-height: 1.6;
 }
 
-/* CONTAINER PADRÃO */
-.container-global {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    width: 100%;
+/* FOCO VISÍVEL */
+:focus-visible {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 3px;
 }
 
 /* ==========================================================================
@@ -33,7 +43,7 @@ body {
    ========================================================================== */
 header {
     width: 100%;
-    background-color: #060320;
+    background-color: var(--cor-primaria);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -98,7 +108,11 @@ header {
 
 .menu-lista a:hover {
     background-color: rgba(255, 255, 255, 0.12);
-    color: #bba009;
+    color: var(--cor-destaque);
+}
+
+.menu-toggle {
+    display: none;
 }
 
 /* ==========================================================================
@@ -108,7 +122,7 @@ header {
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
-    background-color: #060320;
+    background-color: var(--cor-primaria);
     position: relative;
     min-height: 75vh;
 }
@@ -159,8 +173,8 @@ header {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background-color: #bba009;
-    color: #060320;
+    background-color: var(--cor-destaque);
+    color: var(--cor-primaria);
     text-decoration: none;
     font-weight: 700;
     font-size: 16px;
@@ -192,7 +206,7 @@ header {
 .beneficio-texto h2 {
     font-size: clamp(26px, 3.5vw, 36px);
     font-weight: 800;
-    color: #060320;
+    color: var(--cor-primaria);
     margin-bottom: 15px;
 }
 
@@ -207,7 +221,7 @@ header {
     display: block;
     width: 60px;
     height: 4px;
-    background-color: #bba009;
+    background-color: var(--cor-destaque);
     margin: 0 auto 20px auto;
 }
 
@@ -245,7 +259,7 @@ header {
 .card-beneficio h3 {
     font-size: 17px;
     font-weight: 700;
-    color: #060320;
+    color: var(--cor-primaria);
     margin-bottom: 12px;
     min-height: 45px;
     display: flex;
@@ -262,7 +276,7 @@ header {
    5. SEÇÃO SOBRE (QUEM SOMOS & SENSEI)
    ========================================================================== */
 .sobre {
-    background-image: linear-gradient(rgba(6, 3, 32, 0.9), rgba(6, 3, 32, 0.9)), url("imagens/sobre.png");
+    background-image: linear-gradient(rgba(6, 3, 32, 0.9), rgba(6, 3, 32, 0.9)), url("imagens/sobre-1920.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -286,7 +300,7 @@ header {
 }
 
 .sobre h2 strong {
-    color: #bba009;
+    color: var(--cor-destaque);
     font-weight: 800;
 }
 
@@ -318,7 +332,7 @@ header {
     height: 100px;
     object-fit: cover;
     border-radius: 50%;
-    border: 3px solid #bba009;
+    border: 3px solid var(--cor-destaque);
     flex-shrink: 0;
 }
 
@@ -329,7 +343,7 @@ header {
 }
 
 .titulo-sensei {
-    color: #bba009;
+    color: var(--cor-destaque);
     font-size: 14px;
     font-weight: 600;
 }
@@ -345,7 +359,7 @@ header {
     display: flex;
     align-items: center;
     gap: 20px;
-    border: 2px solid #bba009;
+    border: 2px solid var(--cor-destaque);
     border-radius: 12px;
     padding: 20px;
     background-color: rgba(6, 3, 32, 0.5);
@@ -359,7 +373,7 @@ header {
 }
 
 .missao-texto h3 {
-    color: #bba009;
+    color: var(--cor-destaque);
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 5px;
@@ -383,7 +397,7 @@ header {
 .contato-titulo {
     font-size: clamp(26px, 3.5vw, 36px);
     font-weight: 800;
-    color: #060320;
+    color: var(--cor-primaria);
     margin-bottom: 8px;
 }
 
@@ -413,14 +427,14 @@ header {
 
 .card-contato-info i {
     font-size: 32px;
-    color: #060320;
+    color: var(--cor-primaria);
     margin-bottom: 15px;
 }
 
 .card-contato-info h3 {
     font-size: 18px;
     font-weight: 700;
-    color: #060320;
+    color: var(--cor-primaria);
     margin-bottom: 10px;
 }
 
@@ -431,23 +445,23 @@ header {
 }
 
 .btn-link-mapa {
-    color: #bba009;
+    color: var(--cor-destaque);
     text-decoration: none;
     font-weight: 700;
     font-size: 14px;
 }
 
 .featured-whatsapp-card {
-    border: 2px solid #25D366;
+    border: 2px solid var(--cor-whatsapp);
     background-color: rgba(37, 211, 102, 0.02);
 }
 
 .featured-whatsapp-card i {
-    color: #25D366;
+    color: var(--cor-whatsapp);
 }
 
 .btn-whatsapp-action {
-    background-color: #25D366;
+    background-color: var(--cor-whatsapp);
     color: white;
     text-decoration: none;
     padding: 12px 24px;
@@ -467,10 +481,10 @@ header {
    7. RODAPÉ (FOOTER)
    ========================================================================== */
 .footer-dojo {
-    background-color: #060320;
+    background-color: var(--cor-primaria);
     color: #ffffff;
     padding: 60px 20px 20px 20px;
-    border-top: 4px solid #bba009;
+    border-top: 4px solid var(--cor-destaque);
 }
 
 .footer-container {
@@ -482,7 +496,7 @@ header {
 }
 
 .footer-brand h4, .footer-social h4 {
-    color: #bba009;
+    color: var(--cor-destaque);
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 15px;
@@ -506,7 +520,7 @@ header {
 }
 
 .social-icons a:hover {
-    color: #bba009;
+    color: var(--cor-destaque);
 }
 
 .footer-credits {
@@ -521,7 +535,7 @@ header {
 }
 
 .evlux-sig a {
-    color: #bba009;
+    color: var(--cor-destaque);
     text-decoration: none;
     font-weight: 700;
 }
@@ -538,21 +552,32 @@ header {
 }
 
 @media (max-width: 768px) {
-    /* Menu Mobile Simplificado e Seguro */
+    /* Menu mobile: logo e botão na mesma linha; links abrem em painel */
     .header-container {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 10px;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 10px 15px;
     }
 
     .logo-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
+        gap: 10px;
+    }
+
+    .logo-img {
+        width: 56px;
+        height: 56px;
     }
 
     .logo-text {
-        text-align: center;
+        font-size: 20px;
+    }
+
+    .subtexto-logo {
+        font-size: 13px;
+    }
+
+    .menu {
+        flex-basis: 100%;
     }
 
     .menu-lista {
@@ -564,6 +589,83 @@ header {
     .menu-lista a {
         font-size: 14px;
         padding: 8px 12px;
+    }
+
+    .menu-toggle:not([hidden]) {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        margin-left: auto;
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .menu-toggle-barras,
+    .menu-toggle-barras::before,
+    .menu-toggle-barras::after {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #ffffff;
+        border-radius: 2px;
+        transition: transform 0.25s ease, background-color 0.25s ease;
+    }
+
+    .menu-toggle-barras {
+        position: relative;
+    }
+
+    .menu-toggle-barras::before,
+    .menu-toggle-barras::after {
+        content: "";
+        position: absolute;
+        left: 0;
+    }
+
+    .menu-toggle-barras::before {
+        top: -7px;
+    }
+
+    .menu-toggle-barras::after {
+        top: 7px;
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle-barras {
+        background-color: transparent;
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle-barras::before {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .menu-toggle[aria-expanded="true"] .menu-toggle-barras::after {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Aplicado só quando o script.js carrega; sem JS o menu continua visível */
+    .menu-pronto .menu {
+        display: none;
+    }
+
+    .menu-pronto .menu.aberto {
+        display: block;
+    }
+
+    .menu-pronto .menu-lista {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+    }
+
+    .menu-pronto .menu-lista a {
+        display: block;
+        padding: 14px 16px;
+        font-size: 16px;
+        text-align: center;
     }
 
     /* Ajuste de Posicionamento e Escrita no Hero */
