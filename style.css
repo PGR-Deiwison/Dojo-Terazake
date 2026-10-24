@@ -5,6 +5,8 @@
     --cor-primaria: #060320;
     --cor-destaque: #bba009;
     --cor-whatsapp: #25D366;
+    --cor-destaque-escuro: #7a6700;
+    --cor-whatsapp-escuro: #128C7E;
 }
 
 * {
@@ -36,6 +38,11 @@ body {
 :focus-visible {
     outline: 3px solid var(--cor-destaque);
     outline-offset: 3px;
+}
+
+/* Compensa a altura do header fixo ao navegar por âncoras */
+section[id] {
+    scroll-margin-top: 105px;
 }
 
 /* ==========================================================================
@@ -445,7 +452,7 @@ header {
 }
 
 .btn-link-mapa {
-    color: var(--cor-destaque);
+    color: var(--cor-destaque-escuro);
     text-decoration: none;
     font-weight: 700;
     font-size: 14px;
@@ -457,12 +464,12 @@ header {
 }
 
 .featured-whatsapp-card i {
-    color: var(--cor-whatsapp);
+    color: var(--cor-whatsapp-escuro);
 }
 
 .btn-whatsapp-action {
     background-color: var(--cor-whatsapp);
-    color: white;
+    color: var(--cor-primaria);
     text-decoration: none;
     padding: 12px 24px;
     border-radius: 20px;
@@ -552,6 +559,9 @@ header {
 }
 
 @media (max-width: 768px) {
+    section[id] {
+        scroll-margin-top: 76px;
+    }
     /* Menu mobile: logo e botão na mesma linha; links abrem em painel */
     .header-container {
         flex-wrap: wrap;
