@@ -40,3 +40,21 @@
         if (evento.matches) definirMenu(false);
     });
 })();
+
+(function () {
+    const botao = document.querySelector('.btn-ver-mapa');
+    const mapa = document.getElementById('mapa');
+    if (!botao || !mapa) return;
+
+    const iframe = mapa.querySelector('iframe');
+
+    botao.addEventListener('click', function () {
+        const abrir = mapa.hidden;
+        // O src só é definido na primeira abertura, para não carregar o Google Maps antes.
+        if (abrir && !iframe.src) iframe.src = iframe.dataset.src;
+        mapa.hidden = !abrir;
+        botao.setAttribute('aria-expanded', String(abrir));
+        botao.textContent = abrir ? 'Ocultar mapa' : 'Ver mapa';
+        if (abrir) mapa.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+})();
